@@ -1,0 +1,38 @@
+html{
+    --carousel-width: 400px;
+    --carousel-height: 500px; 
+}
+
+
+.item{
+    width: var(--carousel-width);
+    height: var(--carousel-height);
+    overflow: hidden;
+}
+.main__carousel{
+    width: var(--carousel-width);
+    height: var(--carousel-height);
+    overflow: hidden;
+    position: relative;
+}
+.item{
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.active{
+    opacity: 1;
+    
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+.next-arrow, .prev-arrow{
+    width: 100px;
+    height: 50px;
+    background-color: lightblue;
+    cursor: pointer;
+    z-index: 100;
+}
