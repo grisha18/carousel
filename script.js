@@ -23,13 +23,18 @@ nextArrow.addEventListener('click', ()=>{
 
 
 })
+
+
 const prevArrow = document.querySelector('.prev-arrow');
 prevArrow.addEventListener('click', ()=>{
     const prev = (listLength + active - 1 ) % listLength;
-    console.log(`next is ${prev} `);
+    const position = prev * 400;
+    ul.style.left = `-${position}px`
 
-    list[active].classList.remove('active');
-    list[prev].classList.add('active');
+
+    //  console.log(`next is ${prev} `);
+    //  list[active].classList.remove('active');
+    //  list[prev].classList.add('active');
 
     active = prev;
 })
